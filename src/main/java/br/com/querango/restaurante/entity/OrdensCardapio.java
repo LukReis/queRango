@@ -11,24 +11,27 @@ public class OrdensCardapio {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Ordem ordem;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Cardapio cardapio;
 
-    private BigDecimal valor;
+    @Column(name = "valor_de_registro")
+    private BigDecimal valorDeRegistro;
+
     private Integer quantidade;
 
     public OrdensCardapio() {
     }
 
-    public OrdensCardapio(Ordem ordem, Cardapio cardapio, Integer quantidade) {
-        this.ordem = ordem;
+    public OrdensCardapio(Cardapio cardapio, Integer quantidade) {
         this.cardapio = cardapio;
         this.quantidade = quantidade;
-        this.valor = cardapio.getValor();
+        this.valorDeRegistro = cardapio.getValor();
     }
+
+
 
     public Integer getId() {
         return id;
@@ -54,12 +57,12 @@ public class OrdensCardapio {
         this.cardapio = cardapio;
     }
 
-    public BigDecimal getValor() {
-        return valor;
+    public BigDecimal getValorDeRegistro() {
+        return valorDeRegistro;
     }
 
-    public void setValor(BigDecimal valor) {
-        this.valor = valor;
+    public void setValorDeRegistro(BigDecimal valorDeRegistro) {
+        this.valorDeRegistro = valorDeRegistro;
     }
 
     public Integer getQuantidade() {
@@ -74,9 +77,8 @@ public class OrdensCardapio {
     public String toString() {
         return "OrdensCardapio{" +
                 "id=" + id +
-                ", ordem=" + ordem +
                 ", cardapio=" + cardapio +
-                ", valor=" + valor +
+                ", valorDeRegistro=" + valorDeRegistro +
                 ", quantidade=" + quantidade +
                 '}';
     }

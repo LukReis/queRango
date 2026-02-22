@@ -1,9 +1,8 @@
 package br.com.querango.restaurante.util;
 
-import br.com.querango.restaurante.dao.CardapioDao;
-import br.com.querango.restaurante.dao.CategoriaDao;
-import br.com.querango.restaurante.entity.Cardapio;
-import br.com.querango.restaurante.entity.Categoria;
+import br.com.querango.restaurante.dao.*;
+import br.com.querango.restaurante.entity.*;
+
 import javax.persistence.EntityManager;
 import java.math.BigDecimal;
 import java.util.List;
@@ -69,5 +68,94 @@ import java.util.List;
             entityManager.flush();
             entityManager.clear();
         }
-    }
 
+        public static void cadastrarClientes(EntityManager entityManager){
+
+            ClienteDao clienteDao = new ClienteDao(entityManager);
+            EnderecoDao enderecoDao = new EnderecoDao(entityManager);
+
+            Endereco augusta = new Endereco("000000000","casa 43","augusta","Sao Paulo","SP");
+            Cliente felipe = new Cliente("12345678901","felipe@email.com","Felipe Ribeiro");
+            felipe.addEndereco(augusta);
+
+            Endereco rioVermelho = new Endereco("000000001","apto 1001","Rio Vermelho","Salvador","SSA");
+            Cliente cleber = new Cliente("111111111111", "cleber@email.com", "Cleber Machado");
+            cleber.addEndereco(rioVermelho);
+
+            Endereco leblon = new Endereco("000000002","apto 203","Leblon","Rio de Janeiro","RJ");
+            Cliente calvin = new Cliente("09876543210", "calvin@email.com","Calvin Coelho");
+            calvin.addEndereco(leblon);
+
+            Endereco heitorPenteado = new Endereco("000000000","apto 101","Heitor Penteado","Sao Paulo","SP");
+            Cliente tayane = new Cliente("111111111123", "tayane@email.com","Tayane Lopes Costa");
+            tayane.addEndereco(heitorPenteado);
+
+            Endereco consolacao = new Endereco("000000000","apto 1001","Consolacao","Sao Paulo","SP");
+            Cliente denise = new Cliente("111111111145","denise@email.com","Denise Costa");
+            denise.addEndereco(consolacao);
+
+            Endereco nacoesUnidas = new Endereco("000000000","casa 27","NacoesUnidas","Sao Paulo","SP");
+            Cliente claudia = new Cliente("111111111345","claudia@email.com","Claudia Rosa");
+            claudia.addEndereco(nacoesUnidas);
+
+            enderecoDao.cadastrar(augusta);
+            clienteDao.cadastrar(felipe);
+            enderecoDao.cadastrar(rioVermelho);
+            clienteDao.cadastrar(cleber);
+            enderecoDao.cadastrar(leblon);
+            clienteDao.cadastrar(calvin);
+            enderecoDao.cadastrar(heitorPenteado);
+            clienteDao.cadastrar(tayane);
+            enderecoDao.cadastrar(consolacao);
+            clienteDao.cadastrar(denise);
+            enderecoDao.cadastrar(nacoesUnidas);
+            clienteDao.cadastrar(claudia);
+
+            entityManager.flush();
+            entityManager.clear();
+        }
+
+        public static void cadastrarOrdensClientes(EntityManager entityManager){
+            ClienteDao clienteDao = new ClienteDao(entityManager);
+            CardapioDao cardapio = new CardapioDao(entityManager);
+            OrdemDao ordemDao = new OrdemDao(entityManager);
+            List<Cliente> clientes = clienteDao.consultarTodos();
+            List<Cardapio> cardapioList = cardapio.consultarTodos();
+
+            Ordem ordemFelipe = new Ordem(clientes.get(0));
+            ordemFelipe.addOrdensCardapio(new OrdensCardapio(cardapioList.get(0),2));
+            ordemFelipe.addOrdensCardapio(new OrdensCardapio(cardapioList.get(5),3));
+
+            Ordem ordemCleber = new Ordem(clientes.get(1));
+            ordemCleber.addOrdensCardapio(new OrdensCardapio(cardapioList.get(0),1));
+            ordemCleber.addOrdensCardapio(new OrdensCardapio(cardapioList.get(1),2));
+            ordemCleber.addOrdensCardapio(new OrdensCardapio(cardapioList.get(6),3));
+
+            Ordem ordemCalvin = new Ordem(clientes.get(2));
+            ordemCalvin.addOrdensCardapio(new OrdensCardapio(cardapioList.get(2),2));
+            ordemCalvin.addOrdensCardapio(new OrdensCardapio(cardapioList.get(9),3));
+
+            Ordem ordemTayane = new Ordem(clientes.get(3));
+            ordemTayane.addOrdensCardapio(new OrdensCardapio(cardapioList.get(0),2));
+            ordemTayane.addOrdensCardapio(new OrdensCardapio(cardapioList.get(2),3));
+
+            Ordem ordemDenise = new Ordem(clientes.get(4));
+            ordemDenise.addOrdensCardapio(new OrdensCardapio(cardapioList.get(4),2));
+            ordemDenise.addOrdensCardapio(new OrdensCardapio(cardapioList.get(3),1));
+
+            Ordem ordemClaudia = new Ordem(clientes.get(5));
+            ordemClaudia.addOrdensCardapio(new OrdensCardapio(cardapioList.get(3),2));
+            ordemClaudia.addOrdensCardapio(new OrdensCardapio(cardapioList.get(5),3));
+
+            ordemDao.cadastrar(ordemFelipe);
+            ordemDao.cadastrar(ordemCleber);
+            ordemDao.cadastrar(ordemCalvin);
+            ordemDao.cadastrar(ordemTayane);
+            ordemDao.cadastrar(ordemDenise);
+            ordemDao.cadastrar(ordemClaudia);
+
+            entityManager.flush();
+            entityManager.clear();
+
+        }
+    }

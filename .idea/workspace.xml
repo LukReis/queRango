@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="de52a625-706b-4f82-a67e-02e510916e3c" name="Changes" comment="Criando Entidades para Endereço">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/querango/restaurante/dao/EnderecoDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/querango/restaurante/entity/ClienteId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/querango/restaurante/vo/ClienteVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/querango/restaurante/vo/ItensPrincipaisVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/querango/restaurante/dao/ClienteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/querango/restaurante/dao/ClienteDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/querango/restaurante/dao/OrdemDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/querango/restaurante/dao/OrdemDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/querango/restaurante/entity/Cardapio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/querango/restaurante/entity/Cardapio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/querango/restaurante/entity/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/querango/restaurante/entity/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/querango/restaurante/entity/Endereco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/querango/restaurante/entity/Endereco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/querango/restaurante/entity/Ordem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/querango/restaurante/entity/Ordem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/querango/restaurante/entity/OrdensCardapio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/querango/restaurante/entity/OrdensCardapio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/querango/restaurante/service/teste/OrdemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/querango/restaurante/service/teste/OrdemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/querango/restaurante/util/CargaDeDadosUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/querango/restaurante/util/CargaDeDadosUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/querango/restaurante/entity/Cardapio.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/querango/restaurante/entity/Cardapio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/querango/restaurante/util/CargaDeDadosUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/querango/restaurante/util/CargaDeDadosUtil.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="17" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
+    {
+      &quot;state&quot;: &quot;OPEN&quot;,
+      &quot;assignee&quot;: &quot;LukReis&quot;,
+      &quot;author&quot;: &quot;LukReis&quot;
+    }
+  ],
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;LukReis&quot;,
+    &quot;author&quot;: &quot;LukReis&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/LukReis/queRango.git&quot;,
+    &quot;accountId&quot;: &quot;f7660ff5-0458-493e-9bdd-296dc9ab6adc&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="39ziu9GOjsZOCBJlQAhhxdFVjIB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CardapioService.executor": "Run",
+    "Application.OrdemService.executor": "Run",
+    "Application.PratoService.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/luk/Documentos/queRango/queRango",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "ml.llm.AcpAgentsConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.com.querango.restaurante.dao" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.OrdemService">
+    <configuration name="CardapioService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.querango.restaurante.service.teste.CardapioService" />
+      <module name="queRango" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.querango.restaurante.service.teste.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrdemService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.querango.restaurante.service.teste.OrdemService" />
+      <module name="queRango" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.querango.restaurante.service.teste.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.OrdemService" />
+        <item itemvalue="Application.CardapioService" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.31033.145" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="de52a625-706b-4f82-a67e-02e510916e3c" name="Changes" comment="" />
+      <created>1771705522091</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1771705522091</updated>
+      <workItem from="1771705525441" duration="12131000" />
+      <workItem from="1771719948973" duration="99000" />
+      <workItem from="1771773023935" duration="14678000" />
+    </task>
+    <task id="LOCAL-00001" summary="First Commit">
+      <option name="closed" value="true" />
+      <created>1771710247996</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1771710247998</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Criando Metodo CRUD com EntityManager">
+      <option name="closed" value="true" />
+      <created>1771713242041</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1771713242041</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Refatorando Metodos com JPQL">
+      <option name="closed" value="true" />
+      <created>1771718507281</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1771718507281</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Criando Entidade de Cliente">
+      <option name="closed" value="true" />
+      <created>1771719678826</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1771719678826</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Criando Entidades para Ordem e Cliente">
+      <option name="closed" value="true" />
+      <created>1771788547326</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1771788547327</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Criando Entidades para Endereço">
+      <option name="closed" value="true" />
+      <created>1771790415433</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1771790415433</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First Commit" />
+    <MESSAGE value="Criando Metodo CRUD com EntityManager" />
+    <MESSAGE value="Refatorando Metodos com JPQL" />
+    <MESSAGE value="Criando Entidade de Cliente" />
+    <MESSAGE value="Criando Entidades para Ordem e Cliente" />
+    <MESSAGE value="Criando Entidades para Endereço" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criando Entidades para Endereço" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

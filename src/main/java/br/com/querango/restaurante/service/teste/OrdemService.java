@@ -1,11 +1,9 @@
 package br.com.querango.restaurante.service.teste;
-
-import br.com.querango.restaurante.dao.CardapioDao;
 import br.com.querango.restaurante.dao.ClienteDao;
+import br.com.querango.restaurante.dao.EnderecoDao;
 import br.com.querango.restaurante.dao.OrdemDao;
-import br.com.querango.restaurante.entity.Cliente;
+import br.com.querango.restaurante.entity.ClienteId;
 import br.com.querango.restaurante.entity.Ordem;
-import br.com.querango.restaurante.entity.OrdensCardapio;
 import br.com.querango.restaurante.util.CargaDeDadosUtil;
 import br.com.querango.restaurante.util.JPAUtil;
 
@@ -17,18 +15,17 @@ public class OrdemService {
         entityManager.getTransaction().begin();
         CargaDeDadosUtil.cadastarCategorias(entityManager);
         CargaDeDadosUtil.cadastrarProdutosCardapio(entityManager);
+        CargaDeDadosUtil.cadastrarClientes(entityManager);
+        CargaDeDadosUtil.cadastrarOrdensClientes(entityManager);
 
-        CardapioDao cardapioDao = new CardapioDao(entityManager);
+        EnderecoDao enderecoDao = new EnderecoDao(entityManager);
+        System.out.println(enderecoDao.consultarClientesUsandoCriteria(null, "Sao Paulo", null));
+
         ClienteDao clienteDao = new ClienteDao(entityManager);
-        OrdemDao ordemDao = new OrdemDao(entityManager);
-
-        Cliente lucas = new Cliente("11111111111", "Lucas", "00000000");
-        Ordem ordem = new Ordem(lucas);
-        ordem.addOrdensCardapio(new OrdensCardapio(ordem,cardapioDao.consultarPorId(1),2));
-        clienteDao.cadastrar(lucas);
-        ordemDao.cadastrar(ordem);
+        System.out.println(clienteDao.consultarPorNome("Maria"));
         entityManager.getTransaction().commit();
         entityManager.close();
+
 
     }
 }

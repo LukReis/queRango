@@ -16,9 +16,11 @@ public class Cardapio {
     private String nome;
     private String descricao;
     private boolean disponivel;
-    private BigDecimal valor;
 
-    @ManyToOne
+    @Column(name = "valor_de_registro")
+    private BigDecimal valorDeRegistro;
+
+    @ManyToOne(fetch = FetchType.LAZY)
     private Categoria categoria;
 
 
@@ -30,21 +32,21 @@ public class Cardapio {
     public Cardapio() {
     }
 
-    public Cardapio(Integer id, String nome, String descricao, boolean disponivel, BigDecimal valor, Categoria categoria, LocalDateTime dataDeRegistro) {
+    public Cardapio(Integer id, String nome, String descricao, boolean disponivel, BigDecimal valorDeRegistro, Categoria categoria, LocalDateTime dataDeRegistro) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
         this.disponivel = disponivel;
-        this.valor = valor;
+        this.valorDeRegistro = valorDeRegistro;
         this.categoria = categoria;
         this.dataDeRegistro = dataDeRegistro;
     }
 
-    public Cardapio(String nome, String descricao, boolean disponivel, BigDecimal valor, Categoria categoria) {
+    public Cardapio(String nome, String descricao, boolean disponivel, BigDecimal valorDeRegistro, Categoria categoria) {
         this.nome = nome;
         this.descricao = descricao;
         this.disponivel = disponivel;
-        this.valor = valor;
+        this.valorDeRegistro = valorDeRegistro;
         this.categoria = categoria;
     }
 
@@ -81,11 +83,11 @@ public class Cardapio {
     }
 
     public BigDecimal getValor() {
-        return valor;
+        return valorDeRegistro;
     }
 
     public void setValor(BigDecimal valor) {
-        this.valor = valor;
+        this.valorDeRegistro = valor;
     }
 
     public LocalDateTime getDataDeRegistro() {
@@ -111,7 +113,7 @@ public class Cardapio {
                 ", nome='" + nome + '\'' +
                 ", descricao='" + descricao + '\'' +
                 ", disponivel=" + disponivel +
-                ", valor=" + valor +
+                ", valor=" + valorDeRegistro +
                 ", dataDeRegistro=" + dataDeRegistro +
                 '}';
     }
