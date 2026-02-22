@@ -3,6 +3,7 @@ package br.com.querango.restaurante.entity;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "cardapio")
@@ -19,6 +20,7 @@ public class Cardapio {
 
     @ManyToOne
     private Categoria categoria;
+
 
     @Column(name = "data_de_registro")
     private LocalDateTime dataDeRegistro = LocalDateTime.now();
